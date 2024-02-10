@@ -1,0 +1,25 @@
+<div>
+  <div>logooo</div>
+
+  <p> last backend response > {{ lastResponse }}</p>
+
+  <div id="login-options">
+    <label for="input1">Email:</label>
+    <input id="input1" type="text" placeholder="email@address.com" [(ngModel)]="emailInput"/>
+    <label for="input2">Password:</label>
+    <input id="input2" type="text" placeholder="password123" [(ngModel)]="passInput"/>
+    <button (click)="createAccount()"> register </button>
+    <button (click)="google()">google</button>
+    <button (click)="login()"> login </button>
+    <button (click)="signUserOut()"> sign out </button>
+    <input id="input3" type="text" placeholder="yarro" [(ngModel)]="displayNameInput"/>
+    <button (click)="updateName()"> update displayname </button>
+    <button>room code</button>
+    <button (click)="toast()">toast</button>
+    <button (click)="goToProfile()">user profile</button>
+
+    <button (click)="talkWithBackend()"> does it really work though?? </button>
+  </div>
+
+  <pre style="color: Cyan">Current user state > {{ getCurrentUserInfoString() }} </pre>
+</div>
