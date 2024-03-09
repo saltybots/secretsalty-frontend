@@ -1,0 +1,10 @@
+<div>
+  <p>profile page of user {{ user?.email }}</p>
+  <div class="content-container">
+    <img [src]="photoURL" style="width: 7rem; height: auto">
+    <div id="user-info">
+      <p>email: {{user?.email}}</p>
+      <p>display name: {{user?.displayName}}</p>
+    </div>
+  </div>
+</div>

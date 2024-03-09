@@ -1,2 +1,70 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'ngx-toastr/toastr';
 
+
+$background-col: #030222;
+$text-col: #EEEEEE;
+$mobile-breakpoint: 430px; // adjust accordingly, would make it higher tbh
+$tablet-breakpoint: 1000px;
+
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: $background-col;
+  color: $text-col;
+  background-image: url("assets/images/testwallpaper.jpg");
+}
+
+app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.outlet-container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: start;
+  width: 90%;
+  margin: 2.5% auto;
+
+  @media screen and (min-width: $mobile-breakpoint) {
+    width: 70%;
+  }
+
+  @media screen and (min-width: $tablet-breakpoint) {
+    width: 50%;
+  }
+}
+
+#toast-container {
+  @media screen and (max-width: $mobile-breakpoint){
+    position: fixed;
+    margin: 1rem auto;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-size: 0.75rem;
+
+    .ngx-toastr {
+      border-radius: 1rem;
+    }
+  }
+
+  @media screen and (min-width: $tablet-breakpoint){
+    position: fixed;
+    margin: 2rem 1rem;
+    top: 0;
+    right: 0;
+  }
+
+  .ngx-toastr {
+    padding: 0.75rem;
+    max-width: 10rem;
+    background-image: none;
+  }
+}
+
+button {
+  cursor: pointer;
+}

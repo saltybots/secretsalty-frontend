@@ -1,0 +1,22 @@
+// pc-focused styling
+#header {
+  background-color: rgba(50,0, 150, 0.5);
+  padding: 1% 2%;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+
+  #header-logo {
+    cursor: pointer;
+    width: fit-content;
+
+    img {
+      max-width: 1.5rem;
+    }
+
+    span {
+      margin-left: 1rem;
+      font-size: 1.5rem;
+    }
+  }
+}
