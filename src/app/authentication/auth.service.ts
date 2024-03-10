@@ -7,6 +7,7 @@ import {
   signInWithPopup, signOut, updateProfile
 } from '@angular/fire/auth';
 import { ToastService } from '../services/toast.service';
+import {AngularFireAuth} from "@angular/fire/compat/auth";
 
 @Injectable({
   providedIn: 'root'
@@ -84,7 +85,10 @@ export class AuthService {
     return null;
   }
 
-  isLoggedIn(): boolean {
-    return this.auth.currentUser != null;
-}
+  async isLoggedIn() : Promise<boolean> {
+    return await this.auth.authStateReady().then(() => {
+        return !!this.auth.currentUser;
+      }
+    )
+  }
 }
