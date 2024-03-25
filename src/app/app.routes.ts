@@ -5,8 +5,8 @@ import { UserProfileComponent } from './components/user-profile/user-profile.com
 import { authGuard } from './authentication/auth.guard';
 
 export const routes: Routes = [
-  {path: '', redirectTo: 'home', pathMatch: 'full'},
-  {path: 'home', component: LandingPageComponent},
+  {path: '', redirectTo: 'landing', pathMatch: 'full'},
+  {path: 'landing', component: LandingPageComponent},
   {path: 'profile', component: UserProfileComponent, canActivate: [authGuard]},
 ];
 

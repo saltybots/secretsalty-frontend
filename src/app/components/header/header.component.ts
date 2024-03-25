@@ -15,6 +15,6 @@ export class HeaderComponent {
   }
 
   toLandingPage() {
-    this.router.navigate(['home']);
+    this.router.navigate(['landing']);
   }
 }
